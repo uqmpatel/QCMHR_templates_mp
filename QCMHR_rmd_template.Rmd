@@ -1,0 +1,578 @@
+---
+title: "Make a template for QCMHR"
+output: 
+  html_document:
+    css: R-esources/style_QCMHR.css
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: "hide"
+    includes:
+      before_body: R-esources/header_QCMHR.html
+      after_body: R-esources/footer.html
+date: "`r format(Sys.Date(), '%A %b %d %Y') `"
+---
+
+
+<br><br>
+<br><br>
+
+# Packages
+
+<br>
+
+Want to set defaults
+
+<br>
+
+```{r include=FALSE}
+library(tidyverse)
+```
+
+<br><br>
+
+Run this code in your R installation, so that we can embed external some online content...
+
+<br>
+
+```{r eval=FALSE, include=TRUE}
+
+install.packages('webshot')
+webshot::install_phantomjs()
+
+```
+
+
+<br>
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+# Gallery
+
+<br><br>
+
+Inserting images...
+
+<br><br>
+
+
+# <div align="right">![_Community_](Community 2.png){width="100%"}</div>
+
+<br><br>
+<br><br>
+
+The image above was inserted using the following code:
+
+<br>
+
+    <div align="right">![_Community_](R-esources/Community 2.png){width="100%"}</div>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+<center>
+# ![_Relationships II_](R-esources/relationships 2.png){width="50%"}
+</center>
+
+
+<br><br>
+<br><br>
+
+The image above was centered using the following code:
+
+<br>
+
+    <center>
+    ![_Relationships II_](R-esources/relationships 2.png){width="50%"}
+    </center>
+    
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+## Code chunks
+
+<br>
+
+```{r eval=FALSE}
+
+# this is some code i want to demonstrate
+
+library(tidyverse)
+
+names(df)
+
+```
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+## Formatting text
+
+<br>
+
+    **This text is bold.**
+
+    *This text is in italics.* _This text is also in italics._
+
+    ~~This text has a strike-through applied.~~
+
+    ~~**What if something is really important gets crossed out?**~~
+
+    _**It's pretty easy to ~~apply~~ multiple styles.**_
+    
+    Raise something to the ^nth^ degree or make it a ~subscript~
+    
+    apparently it is possible to ==highlight== text aswell
+    
+    one way of writing r code in prose is be doing ` some user friendly syntax `{.R}
+
+<br>
+
+**This text is bold.**
+
+*This text is in italics.* _This text is also in italics._
+
+~~This text has a strike-through applied.~~
+
+~~**What if something is really important gets crossed out?**~~
+
+_**It's pretty easy to ~~apply~~ multiple styles.**_
+
+Raise something to the ^nth^ degree or make it a ~subscript~
+
+apparently it is possible to ==highlight== text aswell..
+
+one way of writing r code in prose is be doing ` some user friendly syntax `{.R}
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+## Lists
+
+<br>
+
+
+<br>
+
+    ### **Books to read**
+
+    * R markdown for dummmies
+    * HTML 101
+    * 50 reasons not to go outside
+
+    ***
+
+    ### **To do list**
+
+    1. Drink more water
+    2. Invent new way to acquire Vitamin D
+    3. Practice villain voice
+
+    ***
+
+    ### **Sub-list**
+    
+    * Reasons to; 
+      * eat
+	      * hungry
+	      * food tastes really good
+	      * hangry
+
+
+<br>
+
+### Books to read
+
+* R markdown for dummmies
+* HTML 101
+* 50 reasons not to go outside
+
+
+### To do list
+
+1. Drink more water
+2. Invent new way to acquire Vitamin D
+3. Practice villain voice
+
+
+### Sub-list
+
+* Reasons to; 
+  * eat
+	  * hungry
+	  * food tastes really good
+	  * hangry
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+## Columns
+
+<br><br>
+
+### [Yan Holtz method](https://holtzy.github.io/Pimp-my-rmd/#footer_and_header)
+
+<br>
+
+
+<div class = "row">
+  
+<div class = "col-md-4">
+<br><br>Since R Markdown use the [bootstrap framework](https://getbootstrap.com/docs/4.0/layout/grid/) under the hood. It is possible to benefit its powerful grid system. Basically, you can consider that your row is divided in 12 sub-units of same width. You can then choose to use only a few of this sub-units.
+</div>
+  
+<div class = "col-md-4">
+<br><br>Here, I use 3 subunits of size 4 (4x3=12). The last column is used for a plot. You can read more about the grid system [here](bootstrap grid system). I got this result showing the following code in my R Markdown document.
+</div>
+  
+<div class = "col-md-4">
+```{r, message=FALSE, echo=FALSE}
+ggplot( mtcars, aes(x=mpg)) + geom_histogram(fill="skyblue", alpha=0.5) + theme_minimal()
+```
+</div>
+
+</div>
+
+
+
+
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+
+## Hyperlinks
+
+<br>
+
+### Internal
+
+<br>
+
+Suppose I want to refer to a point made, or a figure that is located in section [Lists]. I use the following syntax:
+
+    Suppose I want to refer to a point made, or a figure that is located in section [Lists].
+
+<br>
+
+It is also possible to use a different text for the displayed. For example please see the screenshot of [Nirvana playing 'in Bloom' below](#customtag) Example syntax:
+
+    For example please see the screenshot of [Nirvana playing 'in Bloom' below](#customtag) 
+
+<br><br>
+
+
+### External
+
+<br>
+
+[Eyedropper](https://pickcoloronline.com/) for colours anywhere on your monitor.
+
+[.Rmd new](https://www.royfrancis.com/workshop-template-rmd-ga/2001/lab_rmdadv.html)
+
+[Make it yours](https://rstudio4edu.github.io/rstudio4edu-book/doc-yours.html#doc-narrative)
+
+Learn [Logistic Regression](https://mlu-explain.github.io/logistic-regression/)
+
+[Scrollama](https://github.com/russellsamora/scrollama)
+
+[mad fades](https://blog.hubspot.com/website/css-fade-in)
+
+[html footer](https://github.com/rstudio/rmarkdown/issues/1761)
+
+[footer by Yan Holtz](https://holtzy.github.io/Pimp-my-rmd/#footer_and_header)
+
+[gifs](https://blogdown-demo.rbind.io/2018/01/31/gif-animations/)
+
+
+<br>
+
+There is a way to make links open in new tabs... we need to use `target="_blank" style="target-new: tab;"`{.R}
+
+    typing "<a href="https://www.youtube.com/watch?v=H9gFLkNdHvA" target="_blank" style="target-new: tab;"> Cinematic orchestra</a>"
+    
+    gives:
+
+<a href="https://www.youtube.com/watch?v=H9gFLkNdHvA" target="_blank" style="target-new: tab;"> Cinematic orchestra</a>
+
+    typing "[Cinematic orchestra](https://www.youtube.com/watch?v=H9gFLkNdHvA)"
+    
+    gives:
+
+[Cinematic orchestra](https://www.youtube.com/watch?v=H9gFLkNdHvA)
+
+
+
+Apparently it is recommended to use ` rel="noopener noreferrer" `{.R} inside the ` < >  `{.R} wrappers to protect the destination site from modifying the sending site.
+
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+# Dynamic objects
+
+<br><br>
+
+<br>
+
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+## Horizontal tabs {.tabset .tabset-fade .tabset-pills}
+
+<br><br>
+
+In this section of the report there are three major sub headings:
+
+<br>
+
+### Eat {.unnumbered}
+
+<br>
+
+#### You are what you eat, everything good in moderation
+
+<br>
+
+# ![Be sweet with cherries on top](R-esources/cupcake.png){width="30%"}
+
+
+
+
+<br><br>
+
+### Pray {.unnumbered}
+
+<br>
+
+#### Count your blessings not your problems. 
+
+<br>
+
+# <div align="center">![They're all blessings](R-esources/gratitude.png){width="50%"}</div>
+
+<br><br>
+
+### Love {.unnumbered}
+
+<br>
+
+#### Life is too short to not love.
+
+<br>
+
+# <div align="right">![love like a rainbow coloured heart shaped cumulo-nimbus](R-esources/Heartcloud.png){width="30%"}</div>
+
+
+## {- .unlisted .unnumbered}
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+## Animate
+
+<br><br>
+
+### gifs
+
+<br>
+
+<details>
+  <summary>Penguins moving to the right</summary>
+    <center>
+     <br>
+![](R-esources/walking-penguins-emperor-penguins.gif)
+   </center>
+</details>
+
+<br><br>
+
+### Video
+
+<br>
+
+#### Locally stored .mp4 file
+
+
+# <video width="600" height="400" controls>
+#   <source src="R-esources/movie.mp4" type="video/mp4">
+# </video>
+
+<br><br>
+
+Video embedded with following code:
+
+
+
+    <video width="600" height="400" controls>
+     <source src="movie.mp4" type="video/mp4">
+    </video>
+
+
+<br><br>
+
+### Fade in
+
+<br>
+
+#### {#customtag - .unlisted .unnumbered}
+
+# <div class="fade-in-image">
+#  <img src="R-esources/in bloom.png">
+# </div>
+
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+## Expand/hide
+
+<br><br>
+
+### html method
+
+<br>
+
+Below is an expandable code chunk
+
+
+<details>
+  <summary>Click to expand</summary>
+    ```{r, echo=FALSE, eval=TRUE}
+    hist(1:10)
+    ```
+</details> 
+
+
+
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
+## Embed
+
+<br><br>
+
+### let's try a simple page?
+
+<br><br>
+
+Here we need to create a class 'divCanvas' which provides a backdrop for an embedded website which hasn't specified a background colour. 
+
+    <div class="divCanvas">
+      <iframe src="https://blog.hubspot.com/marketing/how-to-add-html-embed-codes-ht#:~:text=Highlight%20the%20embed%20code%2C%20then,'OK'%20or%20'Save." title="Website Page         Title"   width="100%" height="600" allowfullscreen=""></iframe>
+    </div>
+
+
+<br>
+
+<div class="divCanvas">
+  <iframe src="https://blog.hubspot.com/marketing/how-to-add-html-embed-codes-ht#:~:text=Highlight%20the%20embed%20code%2C%20then,'OK'%20or%20'Save." title="Website Page Title"   width="100%" height="600" allowfullscreen=""></iframe>
+</div>
+
+<br><br>
+<br><br>
+<div align="right">
+  <a class = "navlinks" href="#" >Back to top</a>
+</div>
+
+***
+
+<br><br>
+
