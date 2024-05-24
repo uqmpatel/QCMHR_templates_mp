@@ -1,0 +1,270 @@
+
+
+
+
+
+/*----------Title---------*/
+
+.title.toc-ignore {
+  padding-top: 50px; /*space above title*/
+}
+
+h1.title {
+  font-size: 50px;  /*title font size*/
+}
+
+body { 
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #323448; 
+  background-image: url("QCMHR Logos and Templates/Pattern Banners/QCMHR_pattern banners_fade out_dark teal.png");
+  
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;  /* Resize the background image to cover the entire container */
+  background-position: center; /* Center the image */
+  background-attachment: fixed;
+  color: #CDDED5; /* #CDDED5; /* the colour of the text */
+  font-size: 18px;
+}
+
+
+
+/* Add some space above every header and give each header a font size*/
+
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 84px; /* Add some space above every header */
+}
+
+
+h1 {
+    font-size: 38px; 
+}
+
+h2 {
+    font-size: 34px; 
+}
+
+h3 {
+    font-size: 26px; 
+}
+
+h4 {
+    font-size: 20px; 
+}
+
+h5 {
+    font-size: 16px; 
+}
+
+.navlinks {
+  font-size: 14px; 
+}
+
+
+/*----------Hyper links---------*/
+
+/* unvisited link */
+a:link { color: #CDDED5; } 
+
+/* visited link */
+a:visited { color: #CDDED5; }
+
+/* mouse over link */
+a:hover { color: #FFFFFF;
+          text-decoration: none; } 
+
+
+
+
+
+/*------------tabset pills background colours----------- */
+
+  .nav-pills>li>a:hover, .nav-pills>li>a:focus, .nav-pills>li.active>a,     .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+     background-color: rgb(245, 247, 248, 0.9);
+     border-radius: 20px;
+     color: #323448; 
+     }
+
+
+
+
+
+
+/*----------code chunks---------*/
+
+pre, pre:not([class]) { 
+  background-color: rgb(245, 247, 248, 0.9); /* colour of code chunk*/ 
+  border-color: rgb(245, 247, 248, 0.9);
+} 
+
+
+/*----------LOGO above TOC---------*/
+
+#TOC::before {
+  content: "";
+  display: block;
+  height: 240px;
+  margin: 20px 5px 60px 5px;
+  background-image: url("QCMHR Logos and Templates/Logos/PNG/QCMHR_logo reversed transparent_portrait_acronym only.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /*box-shadow: 0 0 10px 10px #323448 inset; /*, -5px -5px 5px 0 #323448 inset; */
+}
+
+
+
+
+/*------------Table of Contents (TOC)----------- */
+
+
+.tocify {
+  border: none;   /*Removes border */
+  border-radius: 20px; /* Gets rid of rounded corners on TOC */
+  font-size: 16px;
+  /* background-color: rgb(50, 10, 10, 1); */ 
+}
+
+.tocify ul, .tocify li { /* Increases spacing between TOC headers*/
+    line-height: 30px !important;
+    background-color: rgb(0, 60, 76, 0.0); /*  #323448;  background colour of inactive TOC*/
+    border-radius: 20px;
+
+}
+
+.tocify-item.list-group-item.active {   /*Makes the border around the active heading in the TOC rounded */
+    border-radius: 20px;
+}
+
+
+/* Active TOC links*/
+
+
+.list-group-item.active, 
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+  
+  border-radius: 20px;
+
+  color: #323448;
+  
+  background-color: rgb(245, 247, 248, 0.9); /*  (rgb(245, 247, 248, 0.9)) colour of active section background colour in TOC*/ 
+  
+}
+
+
+/* Hovered TOC links*/
+
+
+.list-group-item:hover { 
+  color: #FFFFFF;
+  border: none;
+}
+
+
+/*------------Format buttons (btn)----------- */
+
+
+/* When selecting whether show all code or hide how does the 'code' button look? */
+
+.btn-group.open .dropdown-toggle {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* When the buttons are open/active/ or hovered over */
+
+.btn-default:hover,
+.btn-default.active, 
+.btn-default:active, 
+.btn-default.active.focus, 
+.btn-default.active:focus, 
+.btn-default.active:hover, 
+.btn-default:active.focus, 
+.btn-default:active:focus, 
+.btn-default:active:hover, 
+.btn:focus,
+.open>.dropdown-toggle.btn-default,
+.open>.dropdown-toggle.btn-default.focus,
+.open>.dropdown-toggle.btn-default:focus, 
+.open>.dropdown-toggle.btn-default:hover {
+    color: #FFFFFF;
+    background-color: rgb(0, 60, 76, 0.0);
+    border-color: rgb(0, 60, 76, 0.0);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+/* dropdown menu */
+
+.dropdown-menu {
+  background-color: rgb(245, 247, 248, 0.9);
+  color: #323448;
+}
+
+/* buttons in general */
+
+.btn-default,
+.btn-default.focus,
+.btn-default:focus {
+    color: #CDDED5;
+    background-color: rgb(0, 60, 76, 0.0);
+    border-color: rgb(0, 60, 76, 0.0);
+
+}
+
+/* ----------- Add space ------------- this needs to go before the Animate setting*/
+
+.monitor-space {
+ margin-top: 800px;
+}
+
+
+/* ----------- Dont let embedded html pages inherit the css background colour ------------- */
+
+.divCanvas {
+   background-color: white;
+}
+
+.R {
+    font-family: inherit;
+    color: #323448;
+    background-color: rgb(245, 247, 248, 0.9);
+    border-color: rgb(245, 247, 248, 0.9);
+}
+
+
+/* ----------- Animate ------------- */
+
+
+.fade-in-image {
+    opacity: 0.0;
+    transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
+.fade-in-image:hover {
+    opacity: 1.0;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}​
+
+
+
+
+/* ----------- Columns ------------- */
+
+div.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+
+/* this will remove the added space that floating TOC adds by default - although currently space is removed via html code in the footer file*/
+
+/*.tocify-extend-page {
+  height: 0px !important;
+}*/
