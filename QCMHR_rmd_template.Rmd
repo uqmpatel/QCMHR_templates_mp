@@ -2,14 +2,14 @@
 title: "Make a template for QCMHR"
 output: 
   html_document:
-    css: R-esources/style_QCMHR.css
+    css: style_QCMHR.css
     toc: true
     toc_float: true
     number_sections: true
     code_folding: "hide"
     includes:
-      before_body: R-esources/header_QCMHR.html
-      after_body: R-esources/footer.html
+      before_body: header_QCMHR.html
+      after_body: footer.html
 date: "`r format(Sys.Date(), '%A %b %d %Y') `"
 ---
 
@@ -74,7 +74,7 @@ The image above was inserted using the following code:
 
 <br>
 
-    <div align="right">![_Community_](R-esources/Community 2.png){width="100%"}</div>
+    <div align="right">![_Community_](Community 2.png){width="100%"}</div>
 
 <br><br>
 <br><br>
@@ -83,7 +83,7 @@ The image above was inserted using the following code:
 
 
 <center>
-# ![_Relationships II_](R-esources/relationships 2.png){width="50%"}
+# ![_Relationships II_](relationships 2.png){width="50%"}
 </center>
 
 
@@ -95,7 +95,7 @@ The image above was centered using the following code:
 <br>
 
     <center>
-    ![_Relationships II_](R-esources/relationships 2.png){width="50%"}
+    ![_Relationships II_](relationships 2.png){width="50%"}
     </center>
     
 <br><br>
@@ -407,7 +407,7 @@ In this section of the report there are three major sub headings:
 
 <br>
 
-# ![Be sweet with cherries on top](R-esources/cupcake.png){width="30%"}
+# ![Be sweet with cherries on top](cupcake.png){width="30%"}
 
 
 
@@ -422,7 +422,7 @@ In this section of the report there are three major sub headings:
 
 <br>
 
-# <div align="center">![They're all blessings](R-esources/gratitude.png){width="50%"}</div>
+# <div align="center">![They're all blessings](gratitude.png){width="50%"}</div>
 
 <br><br>
 
@@ -434,7 +434,7 @@ In this section of the report there are three major sub headings:
 
 <br>
 
-# <div align="right">![love like a rainbow coloured heart shaped cumulo-nimbus](R-esources/Heartcloud.png){width="30%"}</div>
+# <div align="right">![love like a rainbow coloured heart shaped cumulo-nimbus](Heartcloud.png){width="30%"}</div>
 
 
 ## {- .unlisted .unnumbered}
@@ -462,7 +462,7 @@ In this section of the report there are three major sub headings:
   <summary>Penguins moving to the right</summary>
     <center>
      <br>
-![](R-esources/walking-penguins-emperor-penguins.gif)
+![](walking-penguins-emperor-penguins.gif)
    </center>
 </details>
 
@@ -476,7 +476,7 @@ In this section of the report there are three major sub headings:
 
 
 # <video width="600" height="400" controls>
-#   <source src="R-esources/movie.mp4" type="video/mp4">
+#   <source src="movie.mp4" type="video/mp4">
 # </video>
 
 <br><br>
@@ -499,7 +499,7 @@ Video embedded with following code:
 #### {#customtag - .unlisted .unnumbered}
 
 # <div class="fade-in-image">
-#  <img src="R-esources/in bloom.png">
+#  <img src="in bloom.png">
 # </div>
 
 
